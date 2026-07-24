@@ -1,0 +1,244 @@
+/* Variables */
+:root {
+    --white:   #F5F0E8;
+    --red:     #BF0D3E;
+    --blue:    #132F59;
+    --mid:     #E0CEAE;
+    --brown:   #764A2D;
+
+    --font-family:  "Manrope", sans-serif !important;
+    --font-body:    "Work Sans", sans-serif; 
+    --font-mono:    "IBM Plex Mono", monospace;
+ 
+}
+
+body{
+    background-color: var(--mid);
+   
+}
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      
+    }
+
+    /* Estilos del contenedor de la barra */
+    .navbar {
+      display: flex;
+      justify-content: space-between; /* Empuja el nombre a la izquierda y el menú a la derecha */
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: var(--blue); /* Un tono oscuro elegante */
+      color: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Estilo para el nombre */
+    .nav-logo a {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--mid); /* Un color de acento llamativo */
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    /* Contenedor de los enlaces */
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem; /* Espaciado entre las opciones */
+    }
+
+    /* Estilos individuales de los enlaces */
+    .nav-item a {
+      color: #eeeeee;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    /* Efecto al pasar el cursor */
+    .nav-item a:hover {
+      color: var(--mid);
+    }
+
+    /* Responsive: Ajuste para pantallas pequeñas (móviles) */
+    @media (max-width: 768px) {
+      .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
+      .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+      }
+    }
+
+    /*-- hero --*/
+
+    @keyframes fadeInHero {
+      from {
+        opacity: 0;
+        transform: translateY(20px); /* Viene ligeramente desde abajo */
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);    /* Llega a su posición original */
+      }
+    }
+
+    /* Contenedor Principal del Hero */
+    .hero-container {
+      max-width: 1200px;
+      min-height: 80vh;
+      margin: 0 auto;
+      padding: 2rem;
+      
+      /* Layout en tabla/celdas para alinear texto e imagen de lado a lado */
+      display: table;
+      width: 100%;
+      
+      /* Aplicación de la animación lenta (duración de 1.5 segundos) */
+      animation: fadeInHero 1.5s ease-out forwards;
+    }
+
+    .hero-row {
+      display: table-row;
+
+    }
+
+    /* Columna Izquierda: Textos y Descripción */
+    .hero-text-col {
+      display: table-cell;
+      vertical-align: middle;
+      width: 55%;
+      padding-left: 3rem;
+    }
+
+    /* Columna Derecha: Contenedor de la Fotografía */
+    .hero-img-col {
+      display: table-cell;
+      vertical-align: middle;
+      width: 45%;
+      text-align: left;
+    }
+
+    /* Estilos Tipográficos */
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--text-color);
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+    }
+
+    .hero-description {
+      font-family: var(--font-body);
+      font-size: 1.2rem;
+      color: #555555;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    /* Botón opcional de llamada a la acción */
+    .hero-btn {
+      display: inline-block;
+      font-family: var(--font-display);
+      background-color: var(--accent-color);
+      color: var(--white);
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero-btn:hover {
+      background-color: var(--red);
+    }
+
+    /* Diseño y máscara de la Fotografía */
+    .hero-image-wrapper {
+      display: inline-block;
+      width: 100%;
+      max-width: 400px; /* Tamaño máximo de la foto */
+      aspect-ratio: 1 / 1; /* Mantiene la foto perfectamente cuadrada */
+      /*border-radius: 50%; La transforma en un círculo elegante */
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .hero-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Evita que la imagen se distorsione */
+    }
+
+    /* Adaptación para pantallas móviles */
+    @media (max-width: 768px) {
+      .hero-container, .hero-row, .hero-text-col, .hero-img-col {
+        display: block;
+        width: 100%;
+      }
+      
+      .hero-text-col {
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+
+      .hero-img-col {
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: 2.2rem;
+      }
+    }
+
+    /* Sobre mi */
+
+    .acerca-de-mi {
+            /* Fondo base con el color #BF0D3E suavizado mediante una capa blanca semitransparente */
+
+            /*background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), #BF0D3E;*/
+            border-top: 2px solid #764A2D;
+            border-bottom: 2px solid #764A2D;
+            /* Delimitación con la línea del color #764A2D */
+            
+            
+            /* Centrado de texto */
+            text-align: center;
+            
+            /* Espaciado interno y bordes suaves */
+            padding: 40px 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            /*border-radius: 8px;*/
+            
+            /* Tipografía y color de texto para buen contraste */
+            font-family: --font-body;
+            color: #555555;
+        }
+
+        .acerca-de-mi h2 {
+            color: #764A2D; /* Usamos el color de la línea para el título principal */
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .acerca-de-mi p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 600px;
+            margin: 0 auto;
+        }
