@@ -41,7 +41,7 @@ body{
     /* Estilo para el nombre */
     .nav-logo a {
       font-size: 1.5rem;
-      font-weight: bold;
+      font-family: var(--font-body);
       color: var(--mid); /* Un color de acento llamativo */
       text-decoration: none;
       letter-spacing: 1px;
@@ -52,11 +52,12 @@ body{
       display: flex;
       list-style: none;
       gap: 1.5rem; /* Espaciado entre las opciones */
+      font-family: var(--font-body);
     }
 
     /* Estilos individuales de los enlaces */
     .nav-item a {
-      color: #eeeeee;
+      color: var(--mid);
       text-decoration: none;
       font-size: 1rem;
       font-weight: 500;
@@ -96,7 +97,7 @@ body{
     }
 
     /* Contenedor Principal del Hero */
-    .hero-container {
+    #hero-container {
       max-width: 1200px;
       min-height: 80vh;
       margin: 0 auto;
@@ -115,7 +116,7 @@ body{
 
     }
 
-    /* Columna Izquierda: Textos y Descripción */
+    /* Columna derecha: Textos y Descripción */
     .hero-text-col {
       display: table-cell;
       vertical-align: middle;
@@ -123,7 +124,7 @@ body{
       padding-left: 3rem;
     }
 
-    /* Columna Derecha: Contenedor de la Fotografía */
+    /* Columna izquierda: Contenedor de la Fotografía */
     .hero-img-col {
       display: table-cell;
       vertical-align: middle;
@@ -133,10 +134,10 @@ body{
 
     /* Estilos Tipográficos */
     .hero-title {
-      font-family: var(--font-display);
-      font-size: 3rem;
+      font-family: var(--font-body);
+      font-size: 2rem;
       font-weight: 700;
-      color: var(--text-color);
+      color: black;
       margin-bottom: 1.5rem;
       line-height: 1.2;
     }
@@ -144,7 +145,7 @@ body{
     .hero-description {
       font-family: var(--font-body);
       font-size: 1.2rem;
-      color: #555555;
+      color: var(--brown);
       line-height: 1.7;
       margin-bottom: 2rem;
     }
@@ -166,20 +167,20 @@ body{
       background-color: var(--red);
     }
 
-    /* Diseño y máscara de la Fotografía */
+    /* Diseño de la Fotografía */
     .hero-image-wrapper {
       display: inline-block;
-      width: 100%;
+      width: 80%;
       max-width: 400px; /* Tamaño máximo de la foto */
       aspect-ratio: 1 / 1; /* Mantiene la foto perfectamente cuadrada */
-      /*border-radius: 50%; La transforma en un círculo elegante */
+      border-radius: 10px; 
       overflow: hidden;
       box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     }
 
     .hero-image-wrapper img {
       width: 100%;
-      height: 100%;
+      height: 110%;
       object-fit: cover; /* Evita que la imagen se distorsione */
     }
 
@@ -205,40 +206,209 @@ body{
       }
     }
 
-    /* Sobre mi */
+    /* Sección Acerca de mi */
 
-    .acerca-de-mi {
-            /* Fondo base con el color #BF0D3E suavizado mediante una capa blanca semitransparente */
+    .tituloAcerca{
+        text-align: center;
+        padding-bottom: 5px;
+        margin: 20px auto;
+        max-width: 800px;
+        font-family: --font-body;
+        color: var(--brown);
+       }
 
-            /*background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), #BF0D3E;*/
-            border-top: 2px solid #764A2D;
-            border-bottom: 2px solid #764A2D;
-            /* Delimitación con la línea del color #764A2D */
-            
-            
-            /* Centrado de texto */
-            text-align: center;
-            
-            /* Espaciado interno y bordes suaves */
-            padding: 40px 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            /*border-radius: 8px;*/
-            
-            /* Tipografía y color de texto para buen contraste */
-            font-family: --font-body;
-            color: #555555;
+    .descripcionAcerca{
+       font-family: var(--font-body);
+       font-size: medium;
+       color: var(--brown);
+       line-height: 1.7;
+       margin-bottom: 2rem;
+       text-align: justify;
+       text-align: left;
+       }
+        
+    .botoncv{
+        display: flex;
+        justify-content: center;
+        }  
+    .botonCV{
+        
+        width: 100px;
+        height: 30px;
+        padding: 5px 20px;
+        background-color: var(--blue);
+        color: white;
+        text-decoration: none;
+        font-family: var(--font-family);
+        border-radius: 3px;
+        font-weight: bold;
+        font-size: small;
+        transition: background 0.3s;
+        }
+    .botonCV:hover {
+        background-color: var(--red);
+        }
+        
+
+  /* -- Línea división entre secciones -- */
+    .divisor {
+        border: 0; 
+        height: 2px; 
+        background-color: var(--red); 
+        width: 90%;
+        margin: 40px auto; 
         }
 
-        .acerca-de-mi h2 {
-            color: #764A2D; /* Usamos el color de la línea para el título principal */
-            margin-bottom: 20px;
-            font-size: 2rem;
+  /*-- Sección Proyectos --*/
+    .tituloPortafolio{
+        text-align: center;
+        padding-bottom: 5px;
+        margin: 20px auto;
+        max-width: 800px;
+        font-family: --font-body;
+        color: var(--brown);
         }
 
-        .acerca-de-mi p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            max-width: 600px;
-            margin: 0 auto;
+    .card-body{
+        background-color: var(--mid);
         }
+
+    .card-text{
+        color: var(--brown);
+        font-family: var(--font-body);
+        text-align:left;
+        }
+      
+    .card-descripcion{
+        color: var(--brown);
+        font-family: var(--font-mono);
+        text-align:left;
+        text-align: justify;
+        font-size: small;
+        }
+
+    .iconogit {
+        padding-bottom: 20px;
+        margin-top: 15px;
+        display: flex;
+        justify-content: flex-start;
+        gap: 15px; 
+        }
+
+    /* Estilo de los enlaces e iconos */
+    .iconogit a {
+        color: black;      
+        font-size: 1.5rem;
+        transition: transform 0.2s ease, color 0.2s ease;
+        text-decoration: none;
+        }
+     
+
+  /*-- Sección de Skills --*/
+
+    .tituloSkills{
+        text-align: center;
+        padding-bottom: 5px;
+        margin: 20px auto;
+        max-width: 800px;
+        font-family: --font-body;
+        color: var(--brown);
+       }
+
+    .frontend{
+        text-align: center;
+        padding-top: 5px;
+        margin: 20px auto;
+        max-width: 800px;
+        font-family: --font-body;
+        color: var(--brown);
+        }
+
+    .backend{
+        text-align: center;
+        padding-top: 5px;
+        margin: 20px auto;
+        max-width: 800px;
+        font-family: --font-body;
+        color: var(--brown);
+        }
+
+    .javascript, .html, .bootstrap, .css, .github, .java, .git{
+        padding-bottom: 20px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: center;
+        color:var(--brown);
+        }
+     
+    .javascript p, .html p, .bootstrap p, .css p, .github p, .java p, .git p{
+        color: var(--brown);
+        }
+    
+    .javascript a, .html a, .bootstrap a, .css a, .github a, .java a, .git a{
+        color: black;
+        }
+
+    .linea-divisoria{
+        border-right: 2px solid #BF0D3E;
+        }
+
+  /*-- Sección de Footer --*/
+
+    .footer{
+        background-color: var(--red);
+        }
+
+    .footer-card .nombre{
+        text-align: center;
+        padding: 10px;
+        margin: 20px auto;
+        max-width: 800px;
+        font-family: --font-body;
+        color: var(--mid);
+        margin-bottom: 5px;
+        }
+
+    .footer-card .rol{
+        color: var(--mid); 
+        font-size: 1rem;
+        font-family: var(--font-body);
+        display: flex;
+        justify-content: center;
+        margin-top: 0;     
+        margin-bottom: 10px;
+        }
+
+    /* Contenedor de los iconos */
+    .iconos {
+      padding-bottom: 20px;
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px; /* Espacio entre los iconos */
+    }
+
+    /* Estilo de los enlaces e iconos */
+    .iconos a {
+      color: #f3e5ab;
+      /* Mismo color dorado/beige de la tipografía */
+      font-size: 1.5rem;
+      /* Tamaño de los iconos */
+      transition: transform 0.2s ease, color 0.2s ease;
+      text-decoration: none;
+    }
+
+    /* Efecto cursor */
+    .iconos a:hover {
+      color: white; /* Cambia a blanco al pasar el cursor */
+      transform: scale(1.15);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      }
+
+    #skills{
+      animation: fadeInHero 1.5s ease-out forwards;
+    }
