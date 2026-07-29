@@ -40,11 +40,10 @@ body{
 
     /* Estilo para el nombre */
     .nav-logo a {
-      font-size: 1.5rem;
-      font-family: var(--font-body);
-      color: var(--mid); /* Un color de acento llamativo */
+      font-size: 2.8rem;
+      font-family: --font-body;
+      color: var(--red); /* Un color de acento llamativo */
       text-decoration: none;
-      letter-spacing: 1px;
     }
 
     /* Contenedor de los enlaces */
@@ -214,12 +213,13 @@ body{
         margin: 20px auto;
         max-width: 800px;
         font-family: --font-body;
-        color: var(--brown);
+        font-size: 2.5rem;
+        color: var(--red);
        }
 
     .descripcionAcerca{
        font-family: var(--font-body);
-       font-size: medium;
+       font-size: 1rem;
        color: var(--brown);
        line-height: 1.7;
        margin-bottom: 2rem;
@@ -259,14 +259,15 @@ body{
         margin: 40px auto; 
         }
 
-  /*-- Sección Proyectos --*/
+  /*-- Sección Portafolio --*/
     .tituloPortafolio{
         text-align: center;
         padding-bottom: 5px;
         margin: 20px auto;
         max-width: 800px;
         font-family: --font-body;
-        color: var(--brown);
+        font-size: 2.5rem;
+        color: var(--red);
         }
 
     .card-body{
@@ -274,17 +275,18 @@ body{
         }
 
     .card-text{
-        color: var(--brown);
+        color: var(--red);
         font-family: var(--font-body);
         text-align:left;
+        font-size: 1.5;
         }
       
     .card-descripcion{
-        color: var(--brown);
+        color: var(--blue);
         font-family: var(--font-mono);
         text-align:left;
         text-align: justify;
-        font-size: small;
+        font-size: 1rem;
         }
 
     .iconogit {
@@ -312,7 +314,8 @@ body{
         margin: 20px auto;
         max-width: 800px;
         font-family: --font-body;
-        color: var(--brown);
+        font-size: 2.5rem;
+        color: var(--red);
        }
 
     .frontend{
@@ -321,7 +324,7 @@ body{
         margin: 20px auto;
         max-width: 800px;
         font-family: --font-body;
-        color: var(--brown);
+        color: var(--blue);
         }
 
     .backend{
@@ -330,7 +333,7 @@ body{
         margin: 20px auto;
         max-width: 800px;
         font-family: --font-body;
-        color: var(--brown);
+        color: var(--blue);
         }
 
     .javascript, .html, .bootstrap, .css, .github, .java, .git{
@@ -340,6 +343,7 @@ body{
         display: flex;
         justify-content: center;
         color:var(--brown);
+        font-size: 1.2rem;
         }
      
     .javascript p, .html p, .bootstrap p, .css p, .github p, .java p, .git p{
@@ -366,6 +370,7 @@ body{
         margin: 20px auto;
         max-width: 800px;
         font-family: --font-body;
+        font-size: 2rem;
         color: var(--mid);
         margin-bottom: 5px;
         }
